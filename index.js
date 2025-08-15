@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI,{
 
 })
 .then(()=> console.log("base de datos conectada"))
-.catch((err)=> console.log('error al conectar la base de datos'))
+.catch((err)=> console.log('error al conectar la base de datos:',err.message))
 
 //inicalizar el sevidor
 const PORT = process.env.PORT || 3000;
